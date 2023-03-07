@@ -7,6 +7,9 @@ Cloud Resources:
 Google Cloud
 Railway
 
+Toolings:
+Tanstack query
+
 Reference:
 https://www.youtube.com/watch?v=4xduSsxa5Os
 
