@@ -16,6 +16,7 @@ export default function CreatePost() {
 		e.preventDefault()
 		setIsDisabled(true)
 		mutate(title)
+		setIsDisabled(false)
 	}
 
 	return (
