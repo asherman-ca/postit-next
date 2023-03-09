@@ -9,7 +9,6 @@ export default function CreatePost() {
 	const [title, setTitle] = useState('')
 	const [isDisabled, setIsDisabled] = useState(false)
 	const queryClient = useQueryClient()
-	// let toastPostID: string
 	const toastPostID = useRef<string | undefined>()
 
 	const { mutate } = useMutation(
@@ -35,7 +34,7 @@ export default function CreatePost() {
 		e.preventDefault()
 		setIsDisabled(true)
 		toastPostID.current = toast.loading('Creating your post', {
-			id: toastPostID,
+			id: toastPostID.current,
 		})
 		mutate(title)
 		console.log('postId', toastPostID)
