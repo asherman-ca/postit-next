@@ -24,6 +24,7 @@ export default function Home() {
 			<AddPost />
 			{data?.map((post) => (
 				<Post
+					comments={post.Comments}
 					key={post.id}
 					name={post.user.name}
 					avatar={post.user.image}

@@ -9,9 +9,10 @@ type props = {
 	name: string
 	avatar: string
 	postTitle: string
+	comments: any
 }
 
-export default function Post({ id, name, avatar, postTitle }: props) {
+export default function Post({ id, name, avatar, postTitle, comments }: props) {
 	return (
 		<motion.div
 			animate={{ opacity: 1, scale: 1 }}
@@ -38,7 +39,9 @@ export default function Post({ id, name, avatar, postTitle }: props) {
 						pathname: `/post/${id}`,
 					}}
 				>
-					<p className=' text-sm font-bold text-gray-700'>Comments</p>
+					<p className=' text-sm font-bold text-gray-700'>
+						{comments?.length} Comments
+					</p>
 				</Link>
 			</div>
 		</motion.div>
