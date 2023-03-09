@@ -2,8 +2,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+// import { PostType } from '../types/Post'
 
-export default function Post({ id, name, avatar, postTitle, comments }) {
+type props = {
+	id: string
+	name: string
+	avatar: string
+	postTitle: string
+}
+
+export default function Post({ id, name, avatar, postTitle }: props) {
 	return (
 		<motion.div
 			animate={{ opacity: 1, scale: 1 }}
@@ -30,9 +38,7 @@ export default function Post({ id, name, avatar, postTitle, comments }) {
 						pathname: `/post/${id}`,
 					}}
 				>
-					<p className=' text-sm font-bold text-gray-700'>
-						{comments?.length} Comments
-					</p>
+					<p className=' text-sm font-bold text-gray-700'>Comments</p>
 				</Link>
 			</div>
 		</motion.div>
