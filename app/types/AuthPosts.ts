@@ -3,7 +3,7 @@ export type AuthPosts = {
 	id: string
 	image: string
 	name: string
-	posts: {
+	post: {
 		createdAt: string
 		id: string
 		title: string
