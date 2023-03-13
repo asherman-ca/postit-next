@@ -23,12 +23,12 @@ export default function PostDetail(url: URL) {
 		queryFn: () => fetchDetails(url.params.slug),
 	})
 	if (isLoading) return 'Loading...'
-	// console.log('postdetail data', post)
+	console.log('postdetail data', post)
 
 	return (
 		<div>
 			<Post
-				comments={post!.comments}
+				comments={post!.Comments}
 				key={post!.id}
 				name={post!.user.name}
 				avatar={post!.user.image}

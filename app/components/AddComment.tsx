@@ -32,6 +32,8 @@ export default function AddComment({ id }: props) {
 			},
 			onError: (error) => {
 				console.log(error)
+				setIsDisabled(false)
+				toast.error('Error creating comment', { id: addCommentID.current })
 			},
 		}
 	)
