@@ -7,12 +7,6 @@ export default async function handler(
 	res: NextApiResponse
 ) {
 	if (req.method === 'GET') {
-		// const session = await getServerSession(req, res, authOptions)
-		// if (!session)
-		// 	return res
-		// 		.status(401)
-		// 		.json({ message: 'please sign in to fetch user posts' })
-
 		try {
 			const data = await prisma.post.findUnique({
 				where: { id: req.query.details },
