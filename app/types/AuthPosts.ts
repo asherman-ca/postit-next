@@ -7,7 +7,7 @@ export type AuthPosts = {
 		createdAt: string
 		id: string
 		title: string
-		comments?: {
+		Comments?: {
 			createdAt: string
 			id: string
 			postId: string

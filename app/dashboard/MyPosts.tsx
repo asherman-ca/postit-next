@@ -17,7 +17,6 @@ export default function MyPosts() {
 	})
 
 	if (isLoading) return <h1>Posts are loading...</h1>
-	console.log('data', data)
 	return (
 		<div>
 			{data?.post?.map((post) => (
@@ -27,7 +26,7 @@ export default function MyPosts() {
 					avatar={data.image}
 					name={data.name}
 					title={post.title}
-					comments={post.comments}
+					comments={post.Comments}
 				/>
 			))}
 		</div>
